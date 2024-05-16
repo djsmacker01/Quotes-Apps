@@ -14,10 +14,12 @@
   "author": "Nurudeen (SAAH-HUB)",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "express": "^4.19.2",
     "figlet": "^1.7.0"
   },
   "devDependencies": {
+    "@types/express": "^4.17.21",
     "nodemon": "^3.1.0"
   }
 }
