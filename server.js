@@ -1,6 +1,7 @@
 // console.log('Running')
 const express = require('express')
 const bodyParser = require('body-parser')
+const MongoClient = require('mongodb').MongoClient
 const app = express()
 // const figlet = require('figlet')
 
@@ -19,5 +20,7 @@ app.listen(3000,  ()=> {
     console.log('listening on port 3000')
 })
 
+MongoClient.connect('mongodb-connection-string',(err, client)=>{
 
+})
 // Outputs: 'GET'
