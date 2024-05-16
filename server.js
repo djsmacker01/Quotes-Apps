@@ -5,8 +5,11 @@ const app = express()
 
 
 app.get('/', (req, res)=> { 
-    res.sendFile(__dirname + '/index.html')
-    // console.log(req.headers); 
+    res.sendFile(__dirname + '/index.html') // console.log(req.headers); 
+})
+
+app.post('/quotes', (req, res)=> {
+    console.log('Hello world')
 })
 
 app.listen(3000,  ()=> {
