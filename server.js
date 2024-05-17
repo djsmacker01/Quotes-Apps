@@ -20,8 +20,21 @@ app.listen(3000,  ()=> {
     console.log('listening on port 3000')
 })
 
-MongoClient.connect('mongodb-connection-string', (err, client) => {
-    'mongodb+srv://djsmacker01:Fabulous01@cluster0.pxo3cst.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+// MongoClient.connect('mongodb-connection-string', (err, client) => {
+//     // 'mongodb+srv://djsmacker01:Fabulous01@cluster0.pxo3cst.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+    
+//     if (err) return console.log(err)
+//     console.log('connected to database')
+// })
 
-})
+MongoClient.connect(
+  connectionString,
+  {
+    useUnifiedTopology: true,
+  },
+  (err, client) => {
+    if (err) return console.error(err)
+    console.log('Connected to Database')
+  }
+)
 // Outputs: 'GET'
