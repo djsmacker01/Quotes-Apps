@@ -20,7 +20,8 @@ app.listen(3000,  ()=> {
     console.log('listening on port 3000')
 })
 
-MongoClient.connect('mongodb-connection-string',(err, client)=>{
+MongoClient.connect('mongodb-connection-string', (err, client) => {
+    'mongodb+srv://djsmacker01:Fabulous01@cluster0.pxo3cst.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
 
 })
 // Outputs: 'GET'
