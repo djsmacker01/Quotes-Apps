@@ -27,14 +27,14 @@ app.listen(3000,  ()=> {
 //     console.log('connected to database')
 // })
 
-MongoClient.connect(
-  connectionString,
-  {
-    useUnifiedTopology: true,
-  },
-  (err, client) => {
-    if (err) return console.error(err)
-    console.log('Connected to Database')
-  }
-)
+// MongoClient.connect(
+//   connectionString,
+//   {
+//     useUnifiedTopology: true,
+//   },
+//   (err, client) => {
+//     if (err) return console.error(err)
+//     console.log('Connected to Database')
+//   }
+// )
 // Outputs: 'GET'
