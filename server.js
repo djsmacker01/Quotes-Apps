@@ -11,6 +11,7 @@ MongoClient.connect(connectionString, (err, client) => {
     console.log('connected to database')
 
     app.use(bodyParser.urlencoded({ extended: true }))
+    
 
 app.get('/', (req, res)=> { 
     res.sendFile(__dirname + '/index.html') // console.log(req.headers); 
