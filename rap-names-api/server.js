@@ -13,9 +13,9 @@ app.get('/', (req,res) => {
 })
 
 app.get('/api', (req, res) => { 
-    res.json()
+    res.json(savage)
 })
 
 app.listen(PORT, () => {
-    console.log(`The server is running on ${PORT}!`)
+    console.log(`The server is running on port ${PORT}!`)
 })
