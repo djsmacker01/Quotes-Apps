@@ -10,13 +10,13 @@ const Rappers = {
     'birthLocation': 'London, England',
     },
 
- 'Chance the Rapper':{
+ 'chance the rapper':{
     'age': 29,
     'birthName': ' Chancelor Johnathan Bennet',
     'birthLocation': 'Chicago, Illinois',
     },
 
- 'Dylan':{
+ 'dylan':{
     'age': 34,
     'birthName': 'Dylan',
     'birthLocation': 'Chicago, Illinois',
@@ -28,7 +28,14 @@ app.get('/', (req,res) => {
 })
 
 app.get('/api/:rapperName', (req, res) => { 
-    const nameOfRapper = req.params.rapperName
+    const nameOfRapper = req.params.rapperName.toLowerCase()
+    if (Rappers[nameOfRapper]) {
+        res.json(Rappers[nameOfRapper])
+    }
+
+    else {
+        res.json(Rappers['dylan'])
+    }
     console.log(nameOfRapper)
     // res.json(Rappers)
 })
