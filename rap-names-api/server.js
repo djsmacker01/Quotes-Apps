@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const PORT = 3000
 
-const Rapper = {
+const Rappers = {
 
 '21 savage':{
     'age': 29,
@@ -27,8 +27,10 @@ app.get('/', (req,res) => {
     res.sendFile(__dirname + '/index.html')
 })
 
-app.get('/api', (req, res) => { 
-    res.json(Rapper)
+app.get('/api/:rapperName', (req, res) => { 
+    const nameOfRapper = req.params.rapperName
+    console.log(nameOfRapper)
+    // res.json(Rappers)
 })
 
 app.listen(PORT, () => {
