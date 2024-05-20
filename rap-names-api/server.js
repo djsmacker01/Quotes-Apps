@@ -5,7 +5,7 @@ const PORT = 3000
 const savage = {
     'age': 29,
     'birthName': ' Sheyaa Bin John',
-    'birthLocation': 'London, UK',
+    'birthLocation': 'London, England',
 }
 
 app.get('/', (req,res) => {
