@@ -2,7 +2,7 @@
   "name": "quotes-apps",
   "version": "1.0.0",
   "description": "Quotes application on star wars",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server.js"
