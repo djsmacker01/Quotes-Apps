@@ -40,7 +40,7 @@ app.get('/api/:rapperName', (req, res) => {
     // res.json(Rappers)
 })
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT ||PORT, () => {
     console.log(`The server is running on port ${PORT}!`)
 })
 
