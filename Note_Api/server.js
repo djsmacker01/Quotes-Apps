@@ -53,11 +53,26 @@ app.delete('/api/notes/:id', (req, res) => {
     res.status(200).end()
 })
 
+const newId = () => {
+    const maxId = notes.length > 0 ? Math.max(...notes.map(n => n.id)) : 0
+    return maxId + 1
+}
 app.post('/api/notes', (req, res) => { 
+    const body = req.body
 
-    const maxId = notes.length > 0 ? Math.max(...notes.map(n => n.id)): 0
-    const note = req.body
-    note.id = maxId + 1
+    if (!body.content) {
+        return res.status(404).json({
+            error:'content not found'
+        })
+    }
+
+    const note = {
+        content: body.content,
+        important: Boolean(body.important) || false,
+        id: newId()
+    }
+    // const note = req.body
+    // note.id = maxId + 1
 
     notes = notes.concat(note)
     console.log(note)
