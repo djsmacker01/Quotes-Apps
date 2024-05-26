@@ -28,6 +28,10 @@ app.get('/api/notes', (req, res) => {
 res.json(notes)
 })
 
+app.get('/api/notes/:id', (req, res) => { 
+    
+})
+
 app.listen(PORT,() => {
  console.log(`Server is running on Port:  ${PORT}`)
 })
