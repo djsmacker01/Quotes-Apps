@@ -29,7 +29,9 @@ res.json(notes)
 })
 
 app.get('/api/notes/:id', (req, res) => { 
-    
+    const id = req.params.id 
+    const note = notes.find(note => note.id === id)
+    res.json(note)
 })
 
 app.listen(PORT,() => {
