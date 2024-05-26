@@ -31,7 +31,10 @@ res.json(notes)
 app.get('/api/notes/:id', (req, res) => { 
     const id = req.params.id 
     console.log(id)
-    const note = notes.find(note => note.id === id)
+    const note = notes.find(note => {
+        console.log(note.id, typeof note.id, id, typeof id, note.id === id)
+       return note.id === id 
+    } )
     console.log(note)
     res.json(note)
 })
