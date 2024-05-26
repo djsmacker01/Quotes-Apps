@@ -36,8 +36,13 @@ app.get('/api/notes/:id', (req, res) => {
     //     console.log(note.id, typeof note.id, id, typeof id, note.id === id)
     //    return note.id === id 
     // } )
+    if (note) {
+         res.json(note)
+    } else {
+        res.status(404).end()
+    }
     console.log(note)
-    res.json(note)
+   
 })
 
 app.listen(PORT,() => {
