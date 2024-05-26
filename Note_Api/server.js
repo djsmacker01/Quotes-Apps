@@ -79,6 +79,15 @@ app.post('/api/notes', (req, res) => {
     res.json(note)
 })
 
+const requestLogger = (req,res, next) => {
+    console.log('Method: ', req.method)
+    console.log('Path: ', req.path)
+    console.log('Body: ', re.body)
+    console.log('------')
+    next()
+
+}
+
 app.listen(PORT,() => {
  console.log(`Server is running on Port:  ${PORT}`)
 })
