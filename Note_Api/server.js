@@ -83,7 +83,7 @@ app.post('/api/notes', (req, res) => {
         id: newId()
     }
     // const note = req.body
-    // note.id = maxId + 1
+    note.id = maxId + 1
 
     notes = notes.concat(note)
     console.log(note)
